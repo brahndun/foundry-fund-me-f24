@@ -16,7 +16,7 @@ contract InteractionsTest is Test {
 
     function setUp() external {
         DeployFundMe deployFundMe = new DeployFundMe();
-        fundMe = deployFundMe.run();
+        (fundMe, ) = deployFundMe.run();
         vm.deal(USER, STARTING_BALANCE);
     }
 
